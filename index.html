@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="JVFurigana : A Zend Framework 2 view helper that can convert plain japanese text into properly formatted HTML with furigana (using the ruby tag)." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>JVFurigana</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/poisa/JVFurigana">View on GitHub</a>
+
+          <h1 id="project_title">JVFurigana</h1>
+          <h2 id="project_tagline">A Zend Framework 2 view helper that can convert plain japanese text into properly formatted HTML with furigana (using the ruby tag).</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/poisa/JVFurigana/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/poisa/JVFurigana/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>JVFurigana</h1>
+
+<h3>ZF2 Module for adding furigana to japanese text</h3>
+
+<p>Version 1.0 Created by <a href="http://julianvidal.com/">Julian Vidal</a></p>
+
+<h2>What exactly is furigana?</h2>
+
+<p><a href="http://en.wikipedia.org/wiki/Furigana">Furigana</a> according to Wikipedia is:</p>
+
+<blockquote>
+<p>A Japanese reading aid, consisting of smaller kana, or syllabic characters, printed next to a kanji (ideographic character) or other character to indicate its pronunciation. It is typically used to clarify rare, nonstandard or ambiguous readings, or in children's or learners' materials.</p>
+</blockquote>
+
+<p>Simply put, you could know how to <em>read</em> a certain word in Japanese but that doesn't necessarily mean that you know how to pronounce it. To solve this problem, publishers use furigana to tell the reader how a particular word is pronounced.</p>
+
+<p>A Japanese sentence looks like this:</p>
+
+<p>林さんは英語は話せます。</p>
+
+<p>To add a phonetic guide it is common practice to include the pronunciations between parenthesis right after the kanji, like this:</p>
+
+<p>林（はやし）さんは英語（えいご）は話（はな）せます。</p>
+
+<p>While this makes pronunciations very clear it makes the text less readable.</p>
+
+<p>This module takes furigana entered in the above format and converts it to proper HTML using <strong>ruby</strong>, <strong>rb</strong>, <strong>rp</strong>, and <strong>rt</strong> tags. This will turn the above sentence into this:</p>
+
+<pre><code>&lt;ruby&gt;&lt;rb&gt;林&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;はやし&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;さんは&lt;ruby&gt;&lt;rb&gt;英語&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;えいご&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;は&lt;ruby&gt;&lt;rb&gt;話&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;はな&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;せます。
+</code></pre>
+
+<p>Supported browsers (like Chrome) will render it like this:</p>
+
+<p><img src="http://julianvidal.com/images/furigana.png" alt="Rendered furigana"></p>
+
+<p>And a nice advantage is that browsers that don't support ruby text will degrade gracefully and render your text exactly as you entered it. Actually the text will <em>look</em> the same but since the furigana will now be wrapped in its own tags, you will be able to style them the way you want. You couldn't have done this without ruby tags. So as you see the <strong>ruby</strong> tag has its benefits.</p>
+
+<h2>Installation</h2>
+
+<p>To install JVFurigana you can clone this repository into your ZF2 modules directory. Don't forget to enable it in your <code>config/application.config.php</code> file. </p>
+
+<h2>Usage</h2>
+
+<p>From within a view script, you can do:</p>
+
+<div class="highlight"><pre><span class="o">&lt;?=</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jvfurigana</span><span class="p">(</span><span class="s1">'こんにちは世界（せかい）'</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<h2>FAQ</h2>
+
+<p>See the github FAQ page.</p>
+
+<h2>License</h2>
+
+<p>JVFurigana is released under the Apache license. See the included LICENSE file.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">JVFurigana maintained by <a href="https://github.com/poisa">poisa</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
