@@ -1,4 +1,3 @@
-
 # JVFurigana
 ### ZF2 Module for adding furigana to japanese text
 
@@ -35,7 +34,18 @@ And a nice advantage is that browsers that don't support ruby text will degrade 
 
 ## Installation
 
-To install JVFurigana you can clone this repository into your ZF2 modules directory. Don't forget to enable it in your `config/application.config.php` file. 
+You can install this module in different ways. The easiest one is by using composer. For this to work you need to add the module to your `require` section in your composer.json file:
+
+    "require": {
+        "jv/jvfurigana": "dev-master"
+    }
+
+Then run: `php composer.phar update`
+
+If you don't want to user composer, you can clone or download this repository into your ZF2 modules directory. 
+
+**Whatever way you choose, don't forget to enable the module in your** `config/application.config.php` **file.**
+
 
 ## Usage
 
