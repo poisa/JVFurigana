@@ -2,6 +2,7 @@
     "name": "jv/jvfurigana",
     "description": "A view helper that can convert plain japanese text into properly formatted HTML with furigana (using the ruby tag).",
     "type": "library",
+    "license": "Apache-2.0",
     "keywords": [
         "zf2",
         "furigana",
@@ -14,11 +15,11 @@
             "name": "Julian Vidal",
             "homepage": "http://julianvidal.com/",
             "role": "Developer"
-        },
+        }
     ],
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.*",
+        "zendframework/zendframework": "2.*"
     },
     "autoload": {
         "psr-0": {
