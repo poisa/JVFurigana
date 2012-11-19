@@ -55,6 +55,12 @@ From within a view script, you can do:
 <?=$this->jvfurigana('こんにちは世界（せかい）'); ?>
 ```
 
+## PERFORMANCE
+
+The view helper needs to be initialized with a render strategy that implements the `RenderStrategyInterface`. By default it implements the `FilterStrategy` which will work fine with PHP 5.3. In some windows installs I noticed that this strategy was not catching all the furigana correctly. If that is your case, you can use the `ManualStrategy` which, as the name implies, does a lot of the work manually.
+
+You should always use the `FilterStrategy` because it outperforms the `ManualStrategy` by far. Rendering 40 kilobytes of japanese text with `FilterStrategy` took 0.002 seconds while the `ManualStrategy` took 18.177 seconds on a MacBook Pro i7 with 16gb of ram.
+
 ## FAQ
 
 See the github FAQ page.
@@ -63,3 +69,7 @@ See the github FAQ page.
 
 JVFurigana is released under the Apache license. See the included LICENSE file.
  
+## VERSION HISTORY
+
+2012-11-18 Added filter strategy
+2012-11-11 First version

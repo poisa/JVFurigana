@@ -1,18 +1,22 @@
 <?php
 
-namespace JVFurigana;
+namespace JVFurigana\RenderStrategy;
+
+use JVFurigana\RubyMatch;
+use JVFurigana\RubyTag;
 
 /**
- * JVFurigana\RubyText
+ * JVFurigana\ManualStrategy
  * 
  * A class that can convert plain japanese text into properly formatted HTML with furigana (using the ruby tag)
+ * This class parses each part manually.
  * 
  * @author       Julian Vidal
- * @version      1.0
+ * @version      1.1
  * @link         https://github.com/poisa/JVFurigana
  * 
  */
-class RubyText {
+class ManualStrategy implements RenderStrategyInterface {
 
     protected $_encoding = 'UTF-8';
 
