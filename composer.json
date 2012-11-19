@@ -3,6 +3,7 @@
     "description": "A view helper that can convert plain japanese text into properly formatted HTML with furigana (using the ruby tag).",
     "type": "library",
     "license": "Apache-2.0",
+    "version" : "1.1.0",
     "keywords": [
         "zf2",
         "furigana",
