@@ -27,7 +27,7 @@ This module takes furigana entered in the above format and converts it to proper
 
 Supported browsers (like Chrome) will render it like this:
 
-![Rendered furigana](http://julianvidal.com/images/furigana.png)
+![Rendered furigana](https://julianvidal.com/images/furigana.png)
 
 And a nice advantage is that browsers that don't support ruby text will degrade gracefully and render your text exactly as you entered it. Actually the text will *look* the same but since the furigana will now be wrapped in its own tags, you will be able to style them the way you want. You couldn't have done this without ruby tags. So as you see the **ruby** tag has its benefits.
 
